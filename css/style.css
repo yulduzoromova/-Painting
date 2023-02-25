@@ -14,7 +14,7 @@ body {
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%
+    rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
     );
 }
@@ -40,6 +40,7 @@ section {
 }
 .row .options{
   list-style: none;
+  margin: 10px 0 0 5px;
 }
 .row .options .option {
   display: flex;
@@ -92,13 +93,13 @@ section {
 .colors .option:nth-child(3){
   background-color: #e02020;
 }
-.colors .option:nth-child(1){
+.colors .option:nth-child(4){
   background-color: #6dd400;
 }
-.colors .option:nth-child(1){
+.colors .option:nth-child(5){
   background-color: #4a98f7;
 }
-.colors .option .selected::before {
+.colors .option.selected::before {
   position: absolute;
   content: '';
   top: 50%;
@@ -106,10 +107,11 @@ section {
   height: 12px;
   width: 12px;
   background: inherit;
+  border-radius: inherit;
   border: 2px solid #fff;
   transform: translate(-50%, -50%);
 }
-.color .option:first-child.selected::before {
+.colors .option:first-child.selected::before {
   border-color: #ccc;
 }
 .option #color-picker {
@@ -130,7 +132,7 @@ section {
 }
 .buttons .clear-canvas {
   color: #6c757d;
-  border:1px solid #6c757d;
+  border: 1px solid #6c757d;
   transition: all 0.3s ease;
 }
 .clear-canvas:hover {
